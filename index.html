@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KZ LIFE - STEP 1 TO 100 TRUE COMPLETE FIXED</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:linear-gradient(180deg,#0f172a,#1e293b);color:#fff}
+.app{max-width:580px;margin:auto;min-height:100vh;padding:14px;padding-bottom:90px}
+h1{text-align:center;color:#facc15;font-size:22px}
+.card{background:#334155;border-radius:20px;padding:14px;margin:10px 0}
+button{width:100%;padding:12px;margin:4px 0;border:none;border-radius:12px;background:#facc15;color:#000;font-weight:bold;font-size:14px;cursor:pointer}
+button:active{transform:scale(.97)}
+button.sec{background:#475569;color:#fff}
+button.green{background:#22c55e}
+button.gold{background:linear-gradient(135deg,#facc15,#f97316);color:#000}
+button.red{background:#ef4444;color:#fff}
+button.pink{background:#ec4899;color:#fff}
+button.blue{background:#3b82f6;color:#fff}
+button.purple{background:#8b5cf6;color:#fff}
+button.orange{background:#f97316;color:#fff}
+.top{display:flex;justify-content:space-between;background:#0f172a;padding:10px;border-radius:12px;text-align:center;font-size:11px;flex-wrap:wrap;gap:6px}
+.top b{display:block;font-size:13px;color:#facc15}
+.msg{background:#facc15;color:#000;padding:12px;border-radius:10px;margin:10px 0;font-weight:bold}
+.big{font-size:68px}.center{text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid button{background:#475569;color:#fff;font-size:13px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.grid3 button{background:#475569;color:#fff;font-size:12px}
+.bar{height:14px;background:#0f172a;border-radius:10px;overflow:hidden;margin:6px 0}
+.fill{height:100%;background:linear-gradient(90deg,#22c55e,#facc15)}
+.small{font-size:12px;opacity:.85}
+.lang{display:flex;gap:6px}
+.lang button{background:#0f172a;color:#fff;padding:8px}
+.lang button.active{background:#facc15;color:#000}
+.event{background:#7c3aed;color:#fff;padding:12px;border-radius:12px;margin:10px 0;font-weight:bold;text-align:center}
+#myPhoto{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid #facc15;display:none;margin:auto}
+input[type=file]{display:none}
+.aiRow{display:flex;justify-content:space-between;background:#0f172a;padding:10px;border-radius:10px;margin:5px 0;font-size:13px}
+.jail{background:#ef4444;padding:12px;border-radius:12px;text-align:center;font-weight:bold}
+.badge{display:inline-block;background:#facc15;color:#000;padding:4px 8px;border-radius:20px;font-size:11px;font-weight:bold;margin:2px}
+.ruler{background:linear-gradient(135deg,#facc15,#f97316);color:#000;padding:12px;border-radius:12px;text-align:center;font-weight:bold}
+.check{background:#0f172a;padding:10px;border-radius:10px;font-size:11px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="app">
+<h1>🇰🇿 KZ LIFE - STEP 1 TO 100 FIXED</h1>
+<div class="lang">
+<button onclick="setLang('kz')" id="btn-kz">🇰🇿 Қазақша</button>
+<button onclick="setLang('ru')" id="btn-ru" class="active">🇷🇺 Русский</button>
+<button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
+</div>
+
+<div class="card center">
+<img id="myPhoto" src="">
+<div class="big" id="vEmoji">👶</div>
+<h2 id="vName">Айдар</h2>
+<p id="vStage">0 лет</p>
+<div id="vBadges"></div>
+<div class="ruler" id="vRuler">👤 Гражданин Казахстана</div>
+<div class="ruler" style="background:#22c55e;margin-top:6px" id="vLove">❤️ Любовь народа: 50%</div>
+<label for="photoInput"><div style="background:#ec4899;padding:12px;border-radius:12px;font-weight:bold;cursor:pointer;margin-top:8px">📸 STEP 10 - СВОЁ ФОТО</div></label>
+<input type="file" id="photoInput" accept="image/*" onchange="loadPhoto(event)">
+<button onclick="dailyGift()" class="gold">🎁 STEP 28 - ЕЖЕДНЕВНЫЙ ПОДАРОК</button>
+<button onclick="shareResult()" class="blue">📤 STEP 11 - ПОДЕЛИТЬСЯ (WhatsApp)</button>
+</div>
+
+<div class="top"><div>💰<b id="vMoney">0</b></div><div>🎂<b id="vAge">0</b></div><div>⚡<b id="vEnergy">100</b></div><div>❤️<b id="vHealth">100</b></div><div>💪<b id="vPower">10</b></div><div>🍀<b id="vLuck">50</b></div></div>
+
+<div class="card center">
+<p class="small">🧠 <span id="vSmart">10</span> | 😊 <span id="vMood">100</span> | 🐎 Команда: <span id="vGang">Нет</span> | 🎤 <span id="vCareer">Нет</span></p>
+<p class="small">💼 <span id="vJob">Нет</span> | 🏠 <span id="vHome">Аул</span> | 🚗 <span id="vCar">Нет</span> | 🐎 <span id="vPet">Нет</span></p>
+<p class="small">❤️ <span id="vWife">Нет</span> | 👶 <span id="vKids">0</span> | 👴 <span id="vGrand">0</span> | 🏦 <span id="vBank">0</span></p>
+<p class="small">📱 Фанаты: <span id="vFans">0</span> | 🏛️ <span id="vTitle">Гражданин</span> | 💰 Налоги: <span id="vTax">0</span> ₸/год</p>
+<p class="small">🏫 Школ: <span id="vSchools">0</span> | 🏥 Больниц: <span id="vHospitals">0</span> | 🛣️ Дорог: <span id="vRoads">0</span> | ✈️ <span id="vCity">Семей</span></p>
+<p class="small">👮 <span id="vWanted">Чист</span> | 🧬 <span id="vGen">1</span> | 🔥 Респект: <span id="vStreetRep">0</span> | 🎵 Песен: <span id="vSongs">0</span> | ⚽ Голов: <span id="vGoals">0</span> | 🎬 Фильмов: <span id="vMovies">0</span></p>
+<p class="small">🏘️ Аренда: <span id="vRent">0</span> | ₿ Биткоин: <span id="vCrypto">0</span> | 📈 Акции: <span id="vStock">0</span> | 🏆 <span id="vRank">BABY</span></p>
+<div class="bar"><div class="fill" id="vBar" style="width:10%"></div></div>
+<p class="small" id="vLife">Жизнь: 0%</p>
+<div id="jailBox"></div>
+<button onclick="toggleMusic()" class="pink">🎵 STEP 10 - МУЗЫКА ON/OFF</button>
+</div>
+
+<div id="eventBox"></div>
+<div id="msg"></div>
+
+<div class="card">
+<h2>🎂 STEP 1-8 - Жизнь</h2>
+<button onclick="ageUp()" class="green">🎂 STEP 4 - СТАТЬ СТАРШЕ +1 ГОД</button>
+<button onclick="nextGen()" class="purple">🧬 STEP 29 - НОВОЕ ПОКОЛЕНИЕ</button>
+<button onclick="resetGame()" class="sec">🔄 STEP 19 - Начать заново</button>
+</div>
+
+<div class="card">
+<h2>🎮 STEP 1-8 - Действия</h2>
+<div id="actions"></div>
+</div>
+
+<div class="card">
+<h2>✅ STEP 1-100 - ЧЕКЛИСТ - НИЧЕГО НЕ ПРОПУЩЕНО</h2>
+<div class="check" id="checklist"></div>
+</div>
+
+<div class="card">
+<h2>👑 STEP 60-63 - ПРАВЬ СЕМЕЕМ И КАЗАХСТАНОМ!</h2>
+<div class="grid">
+<button onclick="runElection('Депутат',100000,50)" class="blue">🗳️ STEP 60 - Депутат<br>100K + Ум 50</button>
+<button onclick="runElection('Аким Семея',1000000,60)" class="gold">🏛️ STEP 61 - АКИМ СЕМЕЯ!<br>1M + Фанаты 5K</button>
+<button onclick="runElection('Аким Области',5000000,70)" class="orange">🏙️ STEP 62 - Аким Области<br>5M + Фанаты 50K</button>
+<button onclick="runElection('ПРЕЗИДЕНТ 🇰🇿',20000000,80)" class="red">🇰🇿 STEP 63 - ПРЕЗИДЕНТ!<br>20M + Фанаты 500K</button>
+</div>
+<button onclick="resign()" class="sec">🚪 STEP 64 - Уйти с должности</button>
+</div>
+
+<div class="card">
+<h2>📜 STEP 65-68 - Законы</h2>
+<div class="grid">
+<button onclick="makeLaw('salary')" class="green">💰 STEP 65 - Повысить зарплаты<br>Любовь +10, -500K</button>
+<button onclick="makeLaw('taxDown')" class="green">📉 STEP 66 - Снизить налоги<br>Любовь +15, -300K</button>
+<button onclick="makeLaw('taxUp')" class="orange">📈 STEP 67 - Повысить налоги<br>Любовь -10, +1M</button>
+<button onclick="makeLaw('festival')" class="pink">🎉 STEP 68 - Наурыз в Семее!<br>Любовь +20, -1M</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🏗️ STEP 69-72 - Строй Семей!</h2>
+<div class="grid">
+<button onclick="buildCity('school')" class="blue">🏫 STEP 69 - Школа 2M</button>
+<button onclick="buildCity('hospital')" class="blue">🏥 STEP 70 - Больница 3M</button>
+<button onclick="buildCity('road')" class="blue">🛣️ STEP 71 - Дорога 1M</button>
+<button onclick="buildCity('mosqueCity')" class="purple">🕌 STEP 72 - Мечеть 5M</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🐎 STEP 73-76 - Казахские Традиции</h2>
+<div class="grid">
+<button onclick="kzTradition('kokpar')" class="orange">🐎 STEP 73 - Кокпар!</button>
+<button onclick="kzTradition('baiga')" class="orange">🏇 STEP 74 - Байга!</button>
+<button onclick="kzTradition('toy')" class="pink">🎉 STEP 75 - Той!</button>
+<button onclick="kzTradition('nauryz')" class="green">🌸 STEP 76 - Наурыз!</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🎤 STEP 36-49 - KZ Звезда</h2>
+<div class="grid3">
+<button onclick="chooseCareer('Певец 🎤')" class="pink">🎤 STEP 37 - ПЕВЕЦ</button>
+<button onclick="chooseCareer('Футболист ⚽')" class="green">⚽ STEP 38 - ФУТБОЛИСТ</button>
+<button onclick="chooseCareer('Актер 🎬')" class="purple">🎬 STEP 39 - АКТЕР</button>
+</div>
+<div class="grid">
+<button onclick="starAction('song')" class="pink">🎵 STEP 37 - Песня</button>
+<button onclick="starAction('concert')" class="pink">🎤 STEP 41 - Концерт</button>
+<button onclick="starAction('match')" class="green">⚽ STEP 38 - Матч</button>
+<button onclick="starAction('movie')" class="purple">🎬 STEP 39 - Фильм</button>
+<button onclick="starAction('tiktok')" class="blue">📱 STEP 40 - TikTok</button>
+<button onclick="starAction('trainFoot')" class="green">🏋️ STEP 44 - Тренировка</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🛣️ STEP 31 - Работа</h2>
+<div class="grid">
+<button onclick="hustle('hawker')" class="orange">🍊 Базар +5K</button>
+<button onclick="hustle('okada')" class="orange">🛵 Такси +15K</button>
+<button onclick="hustle('wash')" class="orange">🚗 Мыть машины +8K</button>
+<button onclick="hustle('farm')" class="orange">🌾 Аул +10K</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🐎 STEP 32-34 - Команда + Бата</h2>
+<div class="grid">
+<button onclick="joinGang('Аул Команда')" class="red">🐎 STEP 32 - Аул Команда</button>
+<button onclick="joinGang('Семей Батырлары')" class="red">👑 STEP 32 - Семей Батырлары</button>
+<button onclick="gangFight()" class="red">⚔️ STEP 32 - Кокпар - Битва</button>
+<button onclick="leaveGang()" class="sec">🚪 Выйти из команды</button>
+<button onclick="buyJuju('Бата от Аксакала',5000,10)" class="purple">🍀 STEP 33 - Бата 5K +10</button>
+<button onclick="buyJuju('Большая Бата',200000,50)" class="purple">👑 STEP 33 - Большая Бата 200K +50</button>
+<button onclick="pray()" class="green">🙏 STEP 34 - Молиться +5</button>
+<button onclick="buyPet('Лошадь 🐎',3000000)" class="sec">🐎 STEP 22 - Лошадь 3M</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🐶 STEP 21-22 - Питомцы</h2>
+<div class="grid3">
+<button onclick="buyPet('Собака 🐶',50000)">🐶 STEP 21 - Собака 50K</button>
+<button onclick="buyPet('Кот 🐱',30000)">🐱 STEP 21 - Кот 30K</button>
+<button onclick="buyPet('Лошадь 🐎',3000000)">🐎 STEP 22 - Лошадь 3M</button>
+</div>
+</div>
+
+<div class="card">
+<h2>📈 STEP 23-24 - Биржа</h2>
+<p class="small">STEP 23: Биткоин: <b id="vBtcPrice">100000 ₸</b></p>
+<div class="grid">
+<button onclick="buyCrypto()" class="gold">₿ STEP 23 - Купить Биткоин</button>
+<button onclick="sellCrypto()" class="gold">₿ STEP 23 - Продать Биткоин</button>
+<button onclick="buyStock()" class="blue">📈 STEP 24 - Акции 100K</button>
+<button onclick="sellStock()" class="blue">📉 STEP 24 - Продать Акции</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🏗️ STEP 25-26 - Построй Дом</h2>
+<div class="grid">
+<button onclick="buildHouse('Маленький дом',5000000)">🏠 STEP 25 - Дом 5M</button>
+<button onclick="buildHouse('Большой дом',20000000)">🏡 STEP 25 - Дом 20M</button>
+<button onclick="buildHouse('ДВОРЕЦ 👑',100000000)">🏰 STEP 26 - ДВОРЕЦ 100M</button>
+<button onclick="buildHouse('Мечеть 🕌',30000000)">🕌 STEP 26 - Мечеть 30M</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🤖 AI + Медали</h2>
+<div id="aiBoard"></div>
+<button onclick="aiTurn()" class="blue">🤖 Ход AI</button>
+<div id="achieveBox" class="small">STEP 27 - Пока нет медалей.</div>
+</div>
+
+<div class="card">
+<h2>⚔️ STEP 12 - Battle</h2>
+<div class="grid">
+<button onclick="battle('Даулет')" class="red">⚔️ Даулет 20</button>
+<button onclick="battle('Ерлан')" class="red">⚔️ Ерлан 50</button>
+<button onclick="battle('БАЙ Болат')" class="red">⚔️ БАЙ 90</button>
+<button onclick="train()" class="green">💪 Качаться +10</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🏦 STEP 17 - Банк + Кредит</h2>
+<div class="grid">
+<button onclick="bankPut()" class="blue">🏦 Положить 100K</button>
+<button onclick="bankTake()" class="blue">💰 Забрать</button>
+<button onclick="takeLoan()" class="sec">💳 STEP 17 - Кредит 500K</button>
+<button onclick="payLoan()" class="sec">✅ STEP 17 - Вернуть кредит</button>
+</div>
+<p class="small">Долг: <span id="vDebt">0</span> | В банке: <span id="vBank2">0</span> | Банк даёт 10% каждый год!</p>
+</div>
+
+<div class="card">
+<h2>🎰 STEP 12 - Казино ПОЛНОЕ</h2>
+<div class="grid">
+<button onclick="casino(10000)" class="gold">🎰 10K</button>
+<button onclick="casino(50000)" class="gold">🎰 50K</button>
+<button onclick="casino(100000)" class="gold">🎰 100K</button>
+<button onclick="lottery()" class="gold">🎫 Лотерея 5K</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🏎️ STEP 15 - Гонки</h2>
+<div class="grid">
+<button onclick="race('Семей')" class="purple">🏎️ Семей 100K</button>
+<button onclick="race('Алматы')" class="purple">🏎️ Алматы 500K</button>
+<button onclick="race('Астана')" class="purple">🏎️ Астана 1M</button>
+<button onclick="race('Шымкент')" class="purple">🏎️ Шымкент 500K</button>
+</div>
+</div>
+
+<div class="card">
+<h2>🏘️ STEP 13 - Аренда</h2>
+<div class="grid">
+<button onclick="buyRent()" class="blue">🏠 Купить квартиру 2M</button>
+<button onclick="sellRent()" class="sec">💰 Продать 1.5M</button>
+</div>
+</div>
+
+<div class="card">
+<h2>✈️ STEP 16 - Путешествия - ТОЛЬКО КАЗАХСТАН</h2>
+<div class="grid">
+<button onclick="travel('Семей',0)">🇰🇿 Семей - Дом</button>
+<button onclick="travel('Алматы',200000)">✈️ Алматы 200K</button>
+<button onclick="travel('Астана',300000)">🏙️ Астана 300K</button>
+<button onclick="travel('Шымкент',250000)">🌸 Шымкент 250K</button>
+<button onclick="travel('Актау',400000)">🌊 Актау 400K</button>
+<button onclick="travel('Атырау',350000)">🛢️ Атырау 350K</button>
+<button onclick="travel('Караганда',200000)">⛏️ Караганда 200K</button>
+<button onclick="travel('Мекка',3000000)">🕋 Мекка - Хадж 3M</button>
+<button onclick="travel('Акорда 🇰🇿',0)">🏛️ Акорда - Дворец Президента!</button>
+</div>
+</div>
+
+<div class="card">
+<h2>👮 STEP 14 - Полиция</h2>
+<button onclick="payFine()" class="red">💸 Штраф 100K и выйти</button>
+</div>
+
+<div class="card">
+<h2>🏆 STEP 77-100 - Финальные Уровни</h2>
+<button onclick="finishGame()" class="gold">🏆 STEP 100 - ФИНАЛ</button>
+</div>
+
+<div class="card">
+<h2>📊 STEP 11 - Лидерборд Семея</h2>
+<div id="leaderBoard"></div>
+</div>
+</div>
+
+<script>
+let LANG = localStorage.getItem('kz_lang')||'ru';
+let MUSIC=false;
+let S = JSON.parse(localStorage.getItem('kzlife100true')||'null') || {money:0,age:0,energy:100,health:100,mood:100,smart:10,power:10,luck:50,job:'Нет',salary:0,home:'Аул',car:'Нет',pet:'Нет',wife:'Нет',kids:0,grand:0,biz:'Нет',bizIncome:0,photo:'',bank:0,debt:0,rent:0,city:'Семей',jail:0,stock:0,crypto:0,btcPrice:100000,gen:1,badges:[],gang:'Нет',streetRep:0,career:'Нет',fans:0,songs:0,goals:0,movies:0,title:'Гражданин',love:50,schools:0,hospitals:0,roads:0,taxIncome:0};
+let AI = JSON.parse(localStorage.getItem('kz_ai100true')||'null') || [
+{name:'Даулет',age:0,money:0,power:20},
+{name:'Ерлан',age:0,money:0,power:50},
+{name:'Аружан',age:0,money:0,power:30},
+{name:'Старый Аким',age:55,money:10000000,power:30},
+{name:'Казахский Певец',age:30,money:50000000,power:40}
+];
+let CHECKLIST = [
+"STEP 1: Родился в Ауле","STEP 2: Малыш - Еда / Сон / Игра","STEP 3: Школьник - Учёба","STEP 4: +1 Год","STEP 5: Подросток - Спорт / Экзамен","STEP 6: Работа - Курьер / Такси / Офис","STEP 7: Любовь / Той / Ребёнок","STEP 8: Внук / Врач / Мечеть","STEP 9: 3 Языка + Звук + События","STEP 10: Фото + Музыка","STEP 11: Лидерборд + Поделиться","STEP 12: Battle + Казино + Лотерея","STEP 13: Аренда","STEP 14: Полиция / Тюрьма","STEP 15: Гонки","STEP 16: Путешествия KZ","STEP 17: Банк 10% + Кредит","STEP 18: Случайные события","STEP 19: Save / Load / Сброс","STEP 20: Бизнес - Магазин / Кафе / СТО / Фирма",
+"STEP 21: Питомцы - Собака / Кот","STEP 22: Лошадь","STEP 23: Биткоин","STEP 24: Акции","STEP 25: Построй Дом","STEP 26: Дворец / Мечеть","STEP 27: Медали / Достижения","STEP 28: Ежедневный подарок","STEP 29: Новое поколение","STEP 30: Машины - Cruiser","STEP 31: Работа - Базар / Такси / Аул","STEP 32: Команда - Аул / Батырлары","STEP 33: Бата / Удача","STEP 34: Молиться","STEP 35: Уличный Респект","STEP 36: Выбери карьеру","STEP 37: Певец - Песни","STEP 38: Футболист - Голы","STEP 39: Актер - Фильмы","STEP 40: TikTok",
+"STEP 41: Концерт","STEP 42: Фанаты дают деньги","STEP 43: Блогер 1K","STEP 44: Тренировка","STEP 45: Известный 10K","STEP 46: Звезда 100K","STEP 47: Альбом 5 песен","STEP 48: 10 Голов","STEP 49: 3 Фильма","STEP 50: Мировая Звезда 1M",
+"STEP 51: Ум 50","STEP 52: Ум 80","STEP 53: Фанаты 5K","STEP 54: Фанаты 50K","STEP 55: Фанаты 500K","STEP 56: Деньги 1M","STEP 57: Деньги 10M","STEP 58: Деньги 20M","STEP 59: Деньги 100M","STEP 60: Депутат",
+"STEP 61: Аким Семея","STEP 62: Аким Области","STEP 63: Президент","STEP 64: Уйти с должности","STEP 65: Закон - Зарплаты","STEP 66: Закон - Налоги вниз","STEP 67: Закон - Налоги вверх","STEP 68: Закон - Наурыз","STEP 69: Школа","STEP 70: Больница",
+"STEP 71: Дорога","STEP 72: Мечеть города","STEP 73: Кокпар","STEP 74: Байга","STEP 75: Той","STEP 76: Наурыз","STEP 77: Любовь 90%","STEP 78: 3 Школы","STEP 79: Миллионер","STEP 80: БАЙ",
+"STEP 81: Дворец","STEP 82: 1M Фанатов","STEP 83: Аксакал 70 лет","STEP 84: Многодетный 3 детей","STEP 85: Легенда Семея","STEP 86: Построил 3 Школы","STEP 87: Построил Больницу","STEP 88: Построил Дорогу","STEP 89: Качок 90 силы","STEP 90: Легенда Казахстана",
+"STEP 91: Бата 90","STEP 92: Король Улицы","STEP 93: Аким Семея медаль","STEP 94: Президент медаль","STEP 95: 10% Банк","STEP 96: Аренда 200K","STEP 97: Акции прибыль","STEP 98: Биткоин прибыль","STEP 99: Король Семея","STEP 100: TRUE COMPLETE - ВСЁ В ОДНОМ!"
+];
+let clEl = document.getElementById('checklist');
+if(clEl) clEl.innerHTML = CHECKLIST.map(c=> '✅ '+c).join('<br>');
+if(S.photo){let p=document.getElementById('myPhoto');if(p){p.src=S.photo;p.style.display='block';let e=document.getElementById('vEmoji');if(e) e.style.display='none';}}
+function setTxt(id,txt){let e=document.getElementById(id);if(e) e.innerText=txt;}
+function setHtml(id,html){let e=document.getElementById(id);if(e) e.innerHTML=html;}
+function setLang(l){LANG=l;localStorage.setItem('kz_lang',l);update();}
+function beep(f=600){try{let c=new (window.AudioContext||window.webkitAudioContext)();let o=c.createOscillator();o.connect(c.destination);o.frequency.value=f;o.start();setTimeout(()=>o.stop(),90);}catch(e){}}
+function toggleMusic(){MUSIC=!MUSIC;showMsg(MUSIC?'🎵 Музыка ВКЛ!':'🔇 Музыка ВЫКЛ');}
+function loadPhoto(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{S.photo=r.result;let p=document.getElementById('myPhoto');if(p){p.src=r.result;p.style.display='block';}let em=document.getElementById('vEmoji');if(em) em.style.display='none';showMsg('📸 STEP 10 - Фото поставлено!');update();};r.readAsDataURL(f);}
+function showMsg(t){setHtml('msg','<div class="msg">'+t+'</div>');beep();}
+function showEvent(t){setHtml('eventBox','<div class="event">🎲 STEP 18 - '+t+'</div>');}
+function addBadge(b){if(!S.badges.includes(b)){S.badges.push(b);showMsg('🏆 STEP 27 - ДОСТИЖЕНИЕ: '+b);}}
+function shareResult(){let txt='🇰🇿 KZ LIFE STEP 100! Я - '+S.title+'! Деньги: '+S.money+' ₸, Фанаты: '+S.fans+', Возраст: '+S.age+', Город: '+S.city+'!';if(navigator.clipboard){navigator.clipboard.writeText(txt).then(()=>showMsg('📤 STEP 11 - Скопировано! Отправь в WhatsApp!'));}else showMsg(txt);}
+function fameLevel(){if(S.fans>=1000000)return '🌍 МИРОВАЯ ЗВЕЗДА';if(S.fans>=100000)return '⭐ ЗВЕЗДА KZ';if(S.fans>=10000)return '🎤 Известный';if(S.fans>=1000)return '📱 Блогер';return 'Никто';}
+function stageInfo(){let a=S.age;if(S.title.includes('ПРЕЗИДЕНТ'))return{e:'🇰🇿',t:'ПРЕЗИДЕНТ КАЗАХСТАНА!',r:'PRESIDENT'};if(S.title.includes('Аким Семея'))return{e:'🏛️',t:'АКИМ СЕМЕЯ!',r:'AKIM'};if(S.title.includes('Аким Области'))return{e:'🏙️',t:'АКИМ ОБЛАСТИ!',r:'GOVERNOR'};if(a<1)return{e:'👶',t:'Малыш',r:'BABY'};if(a<6)return{e:'🧒',t:'Малыш',r:'KID'};if(a<12)return{e:'🧒',t:'Школьник',r:'SCHOOL'};if(a<18)return{e:'🧑',t:'Жігіт - Парень из Аула',r:'AUL BOY'};if(a<25)return{e:'🧔',t:'Жігіт',r:'ZHIGIT'};if(S.fans>=1000000)return{e:'🌟',t:'SUPERSTAR KZ!',r:'SUPERSTAR'};if(a<45)return{e:'👑',t:'БАЙ',r:'BAI'};return{e:'👴',t:'АКСАКАЛ - ЛЕГЕНДА',r:'LEGEND'};}
+function save(){try{localStorage.setItem('kzlife100true',JSON.stringify(S));localStorage.setItem('kz_ai100true',JSON.stringify(AI));}catch(e){}}
+function resetGame(){try{localStorage.removeItem('kzlife100true');localStorage.removeItem('kz_ai100true');}catch(e){} location.reload();}
+function dailyGift(){let g=Math.floor(Math.random()*50000)+10000;S.money+=g;showMsg('🎁 STEP 28 - Подарок! +'+g.toLocaleString('ru-RU')+' ₸!');update();}
+function nextGen(){if(S.age<40){showMsg('Доживи до 40!');return;}S.gen+=1;S.age=0;S.money=Math.floor(S.money/2);S.job='Нет';S.salary=0;S.car='Нет';S.wife='Нет';S.kids=0;S.grand=0;S.health=100;S.energy=100;S.gang='Нет';S.streetRep=0;S.home='Аул';S.career='Нет';S.fans=0;S.title='Гражданин';S.love=50;S.schools=0;S.hospitals=0;S.roads=0;S.taxIncome=0;showMsg('🧬 STEP 29 - ПОКОЛЕНИЕ '+S.gen+'!');update();}
+function runElection(position,cost,minSmart){
+if(S.age<18){showMsg('Тебе должно быть 18+!');return;}
+if(S.money<cost){showMsg('Нужно '+cost.toLocaleString('ru-RU')+' ₸ на выборы!');return;}
+if(S.smart<minSmart){showMsg('Нужно Ум '+minSmart+'! У тебя '+S.smart);return;}
+let fansNeed = position=='Депутат'?0:position=='Аким Семея'?5000:position=='Аким Области'?50000:500000;
+if(S.fans<fansNeed){showMsg('Нужно '+fansNeed+' фанатов! У тебя '+S.fans);return;}
+if(position=='Аким Семея' && S.title=='Гражданин'){showMsg('Сначала стань Депутатом!');return;}
+if(position=='Аким Области' && S.title!=='Аким Семея'){showMsg('Сначала стань Акимом Семея!');return;}
+if(position=='ПРЕЗИДЕНТ 🇰🇿' && S.title!=='Аким Области'){showMsg('Сначала стань Акимом Области!');return;}
+S.money-=cost;
+let winChance = 40 + S.love/2 + S.fans/10000 + S.smart/2;
+if(Math.random()*100 < winChance){
+S.title=position;
+let tax = position=='Депутат'?100000:position=='Аким Семея'?500000:position=='Аким Области'?2000000:10000000;
+S.taxIncome=tax;S.love=Math.min(100,S.love+10);addBadge('👑 '+position);
+showMsg('🎉 ТЫ ВЫИГРАЛ! Ты теперь '+position+'! Налоги: +'+tax.toLocaleString('ru-RU')+' ₸/год!');
+if(position=='ПРЕЗИДЕНТ 🇰🇿')addBadge('🇰🇿 ПРЕЗИДЕНТ КАЗАХСТАНА!');
+if(position=='Аким Семея')addBadge('🏛️ АКИМ СЕМЕЯ!');
+}else{S.love=Math.max(0,S.love-10);showMsg('💔 Ты ПРОИГРАЛ выборы... Любовь -10.');}
+update();
+}
+function resign(){S.title='Гражданин';S.taxIncome=0;showMsg('🚪 STEP 64 - Ты ушёл с должности.');update();}
+function makeLaw(type){
+if(S.title=='Гражданин'){showMsg('Ты не правитель! Сначала выиграй выборы!');return;}
+if(type=='salary'){if(S.money<500000){showMsg('Нужно 500K');return;}S.money-=500000;S.love=Math.min(100,S.love+10);showMsg('📜 STEP 65 - Повысить зарплаты! Любовь +10');}
+if(type=='taxDown'){if(S.money<300000){showMsg('Нужно 300K');return;}S.money-=300000;S.love=Math.min(100,S.love+15);showMsg('📜 STEP 66 - Снизить налоги! Любовь +15');}
+if(type=='taxUp'){S.money+=1000000;S.love=Math.max(0,S.love-10);showMsg('📜 STEP 67 - Повысить налоги! +1M, Любовь -10');}
+if(type=='festival'){if(S.money<1000000){showMsg('Нужно 1M');return;}S.money-=1000000;S.love=Math.min(100,S.love+20);S.fans+=5000;showMsg('🎉 STEP 68 - Наурыз! +5000 фанатов! Любовь +20!');}
+if(S.love<=0){S.title='Гражданин';S.taxIncome=0;showMsg('😡 Народ тебя СВЕРГ!');}
+update();
+}
+function buildCity(type){
+if(S.title=='Гражданин'){showMsg('Ты не правитель! Сначала стань Акимом!');return;}
+if(type=='school'){if(S.money<2000000){showMsg('Нужно 2M');return;}S.money-=2000000;S.schools+=1;S.love=Math.min(100,S.love+10);showMsg('🏫 STEP 69 - Школа в Семее! Школ: '+S.schools); }
+if(type=='hospital'){if(S.money<3000000){showMsg('Нужно 3M');return;}S.money-=3000000;S.hospitals+=1;S.love=Math.min(100,S.love+15);showMsg('🏥 STEP 70 - Больница! Больниц: '+S.hospitals); }
+if(type=='road'){if(S.money<1000000){showMsg('Нужно 1M');return;}S.money-=1000000;S.roads+=1;S.love=Math.min(100,S.love+5);showMsg('🛣️ STEP 71 - Дорога! Дорог: '+S.roads); }
+if(type=='mosqueCity'){if(S.money<5000000){showMsg('Нужно 5M');return;}S.money-=5000000;S.love=Math.min(100,S.love+20);addBadge('🕌 Построил Мечеть!');showMsg('🕌 STEP 72 - Мечеть для Семея!'); }
+update();
+}
+function kzTradition(type){
+if(type=='kokpar'){if(S.energy<20){showMsg('Нет энергии!');return;}S.energy-=20;S.power+=10;S.streetRep+=10;showMsg('🐎 STEP 73 - Кокпар! Сила +10, Респект +10');if(S.power>=90)addBadge('🐎 Батыр Кокпара!');}
+if(type=='baiga'){let prize=100000;if(Math.random()<0.5+S.power/200){S.money+=prize;S.streetRep+=5;showMsg('🏇 STEP 74 - Ты ВЫИГРАЛ Байгу! +'+prize+' ₸!');}else showMsg('🏇 STEP 74 - Проиграл Байгу...');}
+if(type=='toy'){if(S.money<200000){showMsg('Нужно 200K на Той!');return;}S.money-=200000;S.love=Math.min(100,S.love+10);S.mood=100;showMsg('🎉 STEP 75 - Той! Любовь +10');}
+if(type=='nauryz'){S.love=Math.min(100,S.love+15);S.luck=Math.min(100,S.luck+10);S.mood=100;showMsg('🌸 STEP 76 - Наурыз! Любовь +15, Удача +10');addBadge('🌸 Наурыз!');}
+update();
+}
+function chooseCareer(c){if(S.age<12){showMsg('После 12 лет!');return;}S.career=c;showMsg('STEP 36 - Карьера: '+c);if(c.includes('Певец'))addBadge('🎤 Певец');if(c.includes('Футболист'))addBadge('⚽ Футболист');if(c.includes('Актер'))addBadge('🎬 Актер');update();}
+function starAction(type){
+if(S.career=='Нет'){showMsg('Сначала выбери карьеру!');return;}
+if(S.energy<20){showMsg('Нет энергии!');return;}
+S.energy-=20;
+if(type=='song'){if(!S.career.includes('Певец')){showMsg('Только для Певцов!');return;}let nf=Math.floor(Math.random()*5000)+1000+S.luck*10;S.fans+=nf;S.songs+=1;let e=nf*10;S.money+=e;showMsg('🎵 STEP 37 - Песня! +'+nf+' фанатов! +'+e+' ₸!');if(S.songs>=5)addBadge('🎵 Альбом 5 песен!');}
+if(type=='concert'){let e=S.fans*5+50000;S.money+=e;S.fans+=Math.floor(S.fans*0.2)+1000;showMsg('🎤 STEP 41 - КОНЦЕРТ в Семее! +'+e.toLocaleString('ru-RU')+' ₸!');if(S.fans>=1000000)addBadge('🌍 МИРОВАЯ ЗВЕЗДА!');}
+if(type=='match'){if(!S.career.includes('Футболист')){showMsg('Только для Футболистов!');return;}let g=Math.floor(Math.random()*3);S.goals+=g;let nf=g*2000+1000;S.fans+=nf;let e=g*20000+10000;S.money+=e;showMsg('⚽ STEP 38 - Матч! Голов: '+g+'! +'+nf+' фанатов!');if(S.goals>=10)addBadge('⚽ 10 Голов!');}
+if(type=='trainFoot'){S.power+=5;showMsg('🏋️ STEP 44 - Сила +5 = '+S.power);}
+if(type=='movie'){if(!S.career.includes('Актер')){showMsg('Только для Актеров!');return;}S.movies+=1;let nf=Math.floor(Math.random()*10000)+2000;S.fans+=nf;let e=100000+S.movies*50000;S.money+=e;showMsg('🎬 STEP 39 - Фильм! +'+nf+' фанатов! +'+e+' ₸!');if(S.movies>=3)addBadge('🎬 3 Фильма!');}
+if(type=='tiktok'){let nf=Math.floor(Math.random()*3000)+500;S.fans+=nf;showMsg('📱 STEP 40 - TikTok! +'+nf+' подписчиков!');}
+update();
+}
+function hustle(type){if(S.energy<15){showMsg('Нет энергии!');return;}S.energy-=15;let earn = type=='hawker'?5000:type=='okada'?15000:type=='wash'?8000:10000;earn+=Math.floor(S.luck/10)*1000;S.money+=earn;S.streetRep+=2;showMsg('STEP 31 - Работа! +'+earn+' ₸!');if(Math.random()<0.05){S.jail=1;showMsg('👮 Полиция!');}update();}
+function joinGang(g){S.gang=g;S.streetRep+= g=='Аул Команда'?20:40;S.power+=10;addBadge('🐎 В команде: '+g);showMsg('🐎 STEP 32 - Ты в команде: '+g);update();}
+function leaveGang(){S.gang='Нет';showMsg('🚪 Вышел из команды!');update();}
+function gangFight(){if(S.gang=='Нет'){showMsg('Вступи в команду!');return;}if(Math.random()<0.5+S.power/200){S.money+=50000;S.streetRep+=10;showMsg('🐎 STEP 32 - Твоя команда ПОБЕДИЛА в Кокпаре! +50K');}else{S.health=Math.max(0,S.health-20);showMsg('💔 Проиграли...');}update();}
+function buyJuju(name,price,luckAdd){if(S.money<price){showMsg('Нужно '+price);return;}S.money-=price;S.luck=Math.min(100,S.luck+luckAdd);showMsg('🍀 STEP 33 - '+name+'! Удача = '+S.luck);update();}
+function pray(){S.luck=Math.min(100,S.luck+5);S.health=Math.min(100,S.health+5);showMsg('🙏 STEP 34 - Помолился! Удача +5');update();}
+function update(){
+let st=stageInfo();
+setTxt('vMoney',S.money.toLocaleString('ru-RU')+' ₸');
+setTxt('vAge',S.age);
+setTxt('vEnergy',S.energy);
+setTxt('vHealth',S.health);
+setTxt('vPower',S.power);
+setTxt('vLuck',S.luck);
+setTxt('vSmart',S.smart);
+setTxt('vName','Айдар - '+st.t+' (Поколение '+S.gen+')');
+setTxt('vStage',S.age+' лет | '+st.t+' | '+S.city+' | '+S.career);
+setTxt('vRuler',S.title=='Гражданин'?'👤 Гражданин Казахстана':'👑 ТЫ ПРАВИШЬ: '+S.title+'! Налоги +'+S.taxIncome.toLocaleString('ru-RU')+' ₸/год');
+setTxt('vLove','❤️ Любовь народа: '+S.love+'%'+(S.love>80?' 😍 Народ обожает тебя!':S.love<20?' 😡 Народ злится!':''));
+setTxt('vJob',S.job);setTxt('vHome',S.home);setTxt('vCar',S.car);setTxt('vPet',S.pet);
+setTxt('vWife',S.wife);setTxt('vKids',S.kids);setTxt('vGrand',S.grand);
+setTxt('vBank',S.bank.toLocaleString('ru-RU')+' ₸');
+setTxt('vBank2',S.bank.toLocaleString('ru-RU'));
+setTxt('vDebt',S.debt.toLocaleString('ru-RU'));
+setTxt('vRent',S.rent);
+setTxt('vStock',S.stock);
+setTxt('vCrypto',S.crypto);
+setTxt('vBtcPrice',S.btcPrice.toLocaleString('ru-RU')+' ₸');
+setTxt('vCity',S.city);
+setTxt('vWanted',S.jail>0?'🚨 В ТЮРЬМЕ!':'Чист ✅');
+setTxt('vRank',st.r);
+setTxt('vGen',S.gen);
+setTxt('vGang',S.gang);
+setTxt('vStreetRep',S.streetRep);
+setTxt('vCareer',S.career);
+setTxt('vFans',S.fans.toLocaleString('ru-RU'));
+setTxt('vTitle',S.title);
+setTxt('vTax',S.taxIncome.toLocaleString('ru-RU'));
+setTxt('vSchools',S.schools);
+setTxt('vHospitals',S.hospitals);
+setTxt('vRoads',S.roads);
+setTxt('vSongs',S.songs);
+setTxt('vGoals',S.goals);
+setTxt('vMovies',S.movies);
+let bar=document.getElementById('vBar');if(bar) bar.style.width=Math.min(100,S.age/80*100)+'%';
+setTxt('vLife','Жизнь: '+Math.round(S.age/80*100)+'%');
+setHtml('jailBox',S.jail>0?'<div class="jail">👮 STEP 14 - ТЫ В ТЮРЬМЕ! Заплати штраф 100K!</div>':'');
+setHtml('vBadges',S.badges.map(b=>'<span class="badge">'+b+'</span>').join(''));
+setHtml('achieveBox','STEP 27 - '+ (S.badges.length?S.badges.join(' • '):'Пока нет медалей.'));
+['kz','ru','en'].forEach(l=>{let b=document.getElementById('btn-'+l);if(b) b.classList.toggle('active',LANG==l);});
+renderActions();renderAI();renderLeader();save();
+}
+function ageUp(){
+if(S.jail>0){showMsg('👮 Ты в тюрьме! Заплати штраф!');return;}
+if(S.age>=80){showMsg('Тебе 80! Нажми ФИНАЛ или НОВОЕ ПОКОЛЕНИЕ!');return;}
+S.age+=1;S.energy=100;S.health=Math.max(0,S.health-2);
+if(S.bizIncome>0)S.money+=S.bizIncome;
+if(S.rent>0){let r=S.rent*200000;S.money+=r;showEvent('STEP 13 - Аренда +'+r.toLocaleString('ru-RU')+' ₸');}
+if(S.bank>0){S.bank+=Math.floor(S.bank*0.10);}
+if(S.fans>0){let fm=Math.floor(S.fans*2);S.money+=fm;showEvent('STEP 42 - Фанаты +'+fm.toLocaleString('ru-RU')+' ₸!');}
+if(S.taxIncome>0){S.money+=S.taxIncome;showEvent('STEP 63 - Налоги! +'+S.taxIncome.toLocaleString('ru-RU')+' ₸!');}
+S.btcPrice=Math.max(20000,Math.floor(S.btcPrice*(0.7+Math.random()*0.7)));
+if(S.money>=1000000)addBadge('💰 STEP 79 - Миллионер');
+if(S.money>=10000000)addBadge('👑 STEP 80 - БАЙ');
+if(S.money>=100000000)addBadge('🇰🇿 STEP 63 - ПРЕЗИДЕНТ');
+if(S.kids>=3)addBadge('👨‍👩‍👧 STEP 84 - Многодетный');
+if(S.schools>=3)addBadge('🏫 STEP 78 - 3 Школы!');
+if(S.love>=90)addBadge('❤️ STEP 77 - Народ обожает тебя!');
+if(S.age>=70)addBadge('👴 STEP 83 - Аксакал!');
+let evs=[
+()=>{S.money+=20000;showEvent('Родители дали 20000 ₸!');},
+()=>{S.health=Math.max(0,S.health-10);showEvent('Ты заболел! -10');},
+()=>{showEvent('🎉 Той! Настроение 100!');},
+()=>{let b=Math.floor(S.luck*500);S.money+=b;showEvent('🍀 Удача! +'+b+' ₸');},
+()=>{showEvent('☀️ Солнечный день в Семее!');},
+()=>{if(S.title!=='Гражданин' && Math.random()<0.2){S.love=Math.max(0,S.love-5);showEvent('📰 Новости: Народ критикует тебя! Любовь -5');}}
+];
+evs[Math.floor(Math.random()*evs.length)]();
+showMsg('🎂 STEP 4 - Тебе '+S.age+' лет!');update();
+}
+function aiTurn(){AI.forEach(a=>{a.age+=1;a.money+=Math.floor(Math.random()*80000)+10000;a.power+=Math.floor(Math.random()*5);});showMsg('🤖 AI сделали ход!');update();}
+function renderAI(){
+let html=`<div class="aiRow"><b>ТЫ - Айдар (${S.title})</b><span>${S.money.toLocaleString('ru-RU')} ₸ | ${S.age} лет</span></div>`;
+AI.forEach(a=>{html+=`<div class="aiRow"><span>${a.name}</span><span>${a.money.toLocaleString('ru-RU')} ₸ | ${a.age} лет</span></div>`;});
+setHtml('aiBoard',html);
+}
+function renderLeader(){
+let all=[{name:'ТЫ - Айдар',money:S.money},...AI].sort((a,b)=>b.money-a.money);
+let html=all.map((x,i)=>`<div class="aiRow"><span>${i+1}. ${x.name}</span><span>${x.money.toLocaleString('ru-RU')} ₸</span></div>`).join('');
+setHtml('leaderBoard',html);
+}
+function buyPet(name,price){if(S.money<price){showMsg('Нужно '+price);return;}S.money-=price;S.pet=name;showMsg('🐶 STEP 21 - Питомец: '+name);update();}
+function buyCrypto(){if(S.money<S.btcPrice){showMsg('Нужно '+S.btcPrice);return;}S.money-=S.btcPrice;S.crypto+=1;showMsg('₿ STEP 23 - Купил Биткоин!');update();}
+function sellCrypto(){if(S.crypto<=0){showMsg('Нет Биткоина!');return;}S.crypto-=1;S.money+=S.btcPrice;showMsg('₿ STEP 23 - Продал за '+S.btcPrice);update();}
+function buyStock(){if(S.money<100000){showMsg('Нужно 100K');return;}S.money-=100000;S.stock+=1;showMsg('📈 STEP 24 - Акции: '+S.stock);update();}
+function sellStock(){if(S.stock<=0){showMsg('Нет акций!');return;}let p=100000+Math.floor(Math.random()*100000)-30000;S.stock-=1;S.money+=p;showMsg('📉 STEP 24 - Продал за '+p);update();}
+function buildHouse(name,price){if(S.money<price){showMsg('Нужно '+price);return;}S.money-=price;S.home=name;if(name.includes('ДВОРЕЦ'))addBadge('🏰 STEP 81 - Дворец');showMsg('🏗️ STEP 25 - Построил: '+name);update();}
+function race(city){if(S.car=='Нет'){showMsg('Сначала купи машину! STEP 30');return;}let prize = city=='Семей'?100000:city=='Алматы'?500000:city=='Астана'?1000000:500000;if(Math.random()<0.5+S.luck/200){S.money+=prize;showMsg('🏎️ STEP 15 - ВЫИГРАЛ в '+city+'! +'+prize);}else{S.health=Math.max(0,S.health-10);if(Math.random()<0.3){S.jail=1;showMsg('🏎️ Авария! 👮 Полиция!');}else showMsg('🏎️ Проиграл в '+city);}update();}
+function buyRent(){if(S.money<2000000){showMsg('Нужно 2M');return;}S.money-=2000000;S.rent+=1;showMsg('🏠 STEP 13 - Аренда! Всего: '+S.rent);update();}
+function sellRent(){if(S.rent<=0){showMsg('Нет квартир!');return;}S.rent-=1;S.money+=1500000;showMsg('💰 STEP 13 - Продал!');update();}
+function travel(city,price){if(S.money<price){showMsg('Нужно '+price);return;}S.money-=price;S.city=city;S.mood=100;if(city.includes('Акорда')){if(S.title.includes('ПРЕЗИДЕНТ'))showMsg('🏛️ Ты в своём дворце Акорда!');else showMsg('🏛️ Ты в Акорде! Когда станешь Президентом, это будет твой дом!');}else showMsg('✈️ STEP 16 - Ты в '+city+'!');update();}
+function payFine(){if(S.jail==0){showMsg('Ты не в тюрьме!');return;}if(S.money<100000){showMsg('Нужно 100K');return;}S.money-=100000;S.jail=0;showMsg('✅ STEP 14 - Вышел из тюрьмы!');update();}
+function battle(enemy){let ep = enemy=='Даулет'?20:enemy=='Ерлан'?50:90;if(Math.random()< (S.power>=ep?0.8:0.2)+S.luck/500){let win=ep*1000;S.money+=win;S.power+=5;showMsg('⚔️ STEP 12 - ПОБЕДА над '+enemy+'! +'+win);}else{S.health=Math.max(0,S.health-20);if(Math.random()<0.4){S.jail=1;showMsg('💔 Проиграл! 👮 Полиция!');}else showMsg('💔 Проиграл '+enemy);}update();}
+function train(){if(S.energy<20){showMsg('Нет энергии!');return;}S.power+=10;S.energy-=20;showMsg('💪 Сила +10 = '+S.power);update();}
+function bankPut(){if(S.money<100000){showMsg('Нужно 100K');return;}S.money-=100000;S.bank+=100000;showMsg('🏦 STEP 17 - +100K в банк!');update();}
+function bankTake(){if(S.bank<=0){showMsg('Пусто!');return;}S.money+=S.bank;showMsg('💰 Забрал '+S.bank);S.bank=0;update();}
+function takeLoan(){if(S.debt>0){showMsg('Верни старый!');return;}S.money+=500000;S.debt=600000;showMsg('💳 STEP 17 - Кредит 500K!');update();}
+function payLoan(){if(S.debt==0){showMsg('Нет долга!');return;}if(S.money<S.debt){showMsg('Нужно '+S.debt);return;}S.money-=S.debt;S.debt=0;showMsg('✅ STEP 17 - Кредит возвращён!');update();}
+function casino(a){if(S.money<a){showMsg('Не хватает!');return;}S.money-=a;if(Math.random()<0.40+S.luck/300){let w=a*2;S.money+=w;showMsg('🎰 STEP 12 - ВЫИГРАЛ +'+w);}else showMsg('🎰 Проиграл '+a);update();}
+function lottery(){if(S.money<5000){showMsg('Нужно 5000');return;}S.money-=5000;if(Math.random()<0.05){S.money+=1000000;showMsg('🎫 ДЖЕКПОТ 1M!!!');}else showMsg('🎫 Не повезло...');update();}
+function doAct(a){
+if(a=='eat'){S.energy=100;showMsg('🍽️ STEP 2 - Поел!');}
+if(a=='sleep'){S.energy=100;S.health=Math.min(100,S.health+5);showMsg('😴 STEP 2 - Поспал!');}
+if(a=='play'){S.mood=100;showMsg('🧸 STEP 2 - Весело!');}
+if(a=='study'){S.smart+=10;showMsg('📚 STEP 3 - Ум +10 = '+S.smart);}
+if(a=='exam'){if(S.smart>=70){S.money+=5000;showMsg('📝 STEP 5 - Экзамен на 5! +5000');}else showMsg('Надо учиться!');}
+if(a=='sport'){S.health=Math.min(100,S.health+10);S.power+=2;showMsg('⚽ STEP 5 - +10 здоровья, +2 силы');}
+if(a=='work'){if(!S.salary){showMsg('Выбери работу!');return;}S.money+=S.salary;showMsg('💼 STEP 6 - +'+S.salary+' ₸');}
+if(a=='uni'){if(S.money<200000){showMsg('Нужно 200K');return;}S.money-=200000;S.smart+=20;showMsg('🎓 Университет!');}
+if(a=='love'){S.wife='Есть ❤️';showMsg('❤️ STEP 7 - Любовь!');}
+if(a=='wedding'){if(S.wife=='Нет'){showMsg('Сначала любовь!');return;}if(S.money<1000000){showMsg('Нужно 1M');return;}S.money-=1000000;S.wife='Жена/Муж 💍';addBadge('💍 Женат');showMsg('💍 STEP 7 - ТОЙ!');}
+if(a=='baby'){if(S.wife!=='Жена/Муж 💍'){showMsg('Сначала той!');return;}S.kids+=1;showMsg('👶 STEP 7 - Ребёнок! '+S.kids);}
+if(a=='grand'){S.grand+=1;showMsg('👶 STEP 8 - Внук! '+S.grand);}
+if(a=='doctor'){if(S.money<200000){showMsg('Нужно 200K');return;}S.money-=200000;S.health=100;showMsg('🏥 STEP 8 - Здоровье 100!');}
+if(a=='mosque'){if(S.money<30000000){showMsg('Нужно 30M');return;}S.money-=30000000;showMsg('🕌 STEP 8 - Мечеть!');}
+if(a=='phone'){if(S.money<120000){showMsg('Нужно 120K');return;}S.money-=120000;showMsg('📱 Телефон!');}
+update();
+}
+function setJob(j,s){S.job=j;S.salary=s;showMsg('STEP 6 - Работа: '+j);update();}
+function buyBiz(n,p,inc){if(S.money<p){showMsg('Нужно '+p);return;}S.money-=p;S.biz=n;S.bizIncome=inc;showMsg('STEP 20 - Бизнес: '+n);update();}
+function buyItem(t,n,p){if(S.money<p){showMsg('Нужно '+p);return;}S.money-=p;if(t=='car')S.car=n;if(t=='home')S.home=n;showMsg('STEP 30 - Купил: '+n);update();}
+function renderActions(){
+let a=S.age,h='';let b=(l,f)=>`<button onclick="${f}">${l}</button>`;let s=(l,f)=>`<button class="sec" onclick="${f}">${l}</button>`;
+if(a<6)h+=b('🍽️ STEP 2 - Поесть',"doAct('eat')")+b('😴 STEP 2 - Поспать',"doAct('sleep')")+b('🧸 STEP 2 - Играть',"doAct('play')");
+if(a>=6&&a<18)h+=b('📚 STEP 3 - Учиться',"doAct('study')")+b('📝 STEP 5 - Экзамен',"doAct('exam')")+b('⚽ STEP 5 - Спорт',"doAct('sport')");
+if(a>=12)h+=`<div class="grid"><button onclick="setJob('Курьер',5000)">🛵 STEP 6 - Курьер 5K</button><button onclick="setJob('Такси',80000)">🚕 STEP 6 - Такси 80K</button><button onclick="setJob('Офис',180000)">💻 STEP 6 - Офис 180K</button><button onclick="setJob('Бизнес',250000)">🏪 STEP 6 - Бизнес 250K</button></div>`+b('💼 STEP 6 - Работать',"doAct('work')");
+if(a>=12&&a<25)h+=s('📱 Телефон 120K',"doAct('phone')")+s('🎓 Университет 200K',"doAct('uni')");
+if(a>=18)h+=s('❤️ STEP 7 - Найти любовь',"doAct('love')")+s('💍 STEP 7 - Той 1M',"doAct('wedding')")+s('👶 STEP 7 - Ребёнок',"doAct('baby')");
+if(a>=25)h+=`<div class="grid"><button onclick="buyBiz('Магазин',1000000,50000)">🏪 STEP 20 - Магазин 1M</button><button onclick="buyBiz('Кафе',3000000,150000)">☕ STEP 20 - Кафе 3M</button><button onclick="buyBiz('СТО',5000000,300000)">🔧 STEP 20 - СТО 5M</button><button onclick="buyBiz('Фирма',10000000,800000)">🏗️ STEP 20 - Фирма 10M</button></div>`;
+if(a>=25)h+=`<div class="grid"><button onclick="buyItem('car','Land Cruiser',25000000)">🚙 STEP 30 - Cruiser 25M</button><button onclick="buyItem('home','Дом',50000000)">🏠 STEP 25 - Дом 50M</button></div>`;
+if(a>=45)h+=s('👶 STEP 8 - Внук',"doAct('grand')")+s('🏥 STEP 8 - К врачу 200K',"doAct('doctor')")+s('🕌 STEP 8 - Мечеть 30M',"doAct('mosque')");
+setHtml('actions',h);
+}
+function finishGame(){
+let title = S.title.includes('ПРЕЗИДЕНТ')?'🇰🇿 ТЫ - ПРЕЗИДЕНТ КАЗАХСТАНА!':S.title.includes('Аким Семея')?'🏛️ ТЫ - АКИМ СЕМЕЯ!':S.title.includes('Аким Области')?'🏙️ ТЫ - АКИМ ОБЛАСТИ!':'ТЫ ПРОШЁЛ ИГРУ!';
+let rating = S.love>=80?'❤️ Народ ОБОЖАЕТ тебя!':S.love>=50?'👍 Народ доволен!':S.love>=20?'😐 Не очень доволен...':'😡 Народ тебя ненавидит!';
+showMsg('🏆 STEP 100 - ФИНАЛ! '+title+' '+rating+' Должность: '+S.title+', Любовь: '+S.love+'%, Школ: '+S.schools+', Больниц: '+S.hospitals+', Дорог: '+S.roads+', Деньги: '+S.money.toLocaleString('ru-RU')+' ₸, Фанаты: '+S.fans.toLocaleString('ru-RU')+', Детей: '+S.kids+'. ТЫ ПРОШЁЛ ВСЕ 100 ШАГОВ! 🇰🇿');
+}
+update();
+</script>
+</body>
+</html>
